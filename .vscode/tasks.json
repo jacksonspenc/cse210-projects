@@ -6,7 +6,7 @@
         {
             "label": "build-sandbox-Sandbox",
             "command": "dotnet",
-            "type": "process",
+            "type": "shell",
             "args": [
                 "build",
                 "${workspaceFolder}/sandbox/Sandbox/Sandbox.csproj",
