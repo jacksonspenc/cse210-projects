@@ -1,5 +1,9 @@
 using System;
-
+//I've made sure to meet all of the requirements of the program. I wanted to make
+//sure the program would be strong and accessible so I added multiple commands for the menu
+//and added an unsaved change detection and automatic saving prompt. I used the help of my teammates
+//to learn how to have custom serialization. Style is all over the place as I am still figuring out
+//the best way to format in C#
 class Globals 
 {
   public static List<string> _prompts = new List <string> 
