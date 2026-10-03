@@ -12,5 +12,30 @@ class Program
             + "thine own understanding. In all thy ways acknowledge him, and he "
             + "shall direct thy paths.";
         Scripture scripture = new Scripture(reference, text);
+
+        const int WordsToHidePerTurn = 3;
+ 
+        while (true)
+        {
+            Console.Clear();
+            Console.WriteLine(scripture.GetDisplayText());
+            Console.WriteLine();
+ 
+            if (scripture.IsCompletelyHidden())
+            {
+                break;
+            }
+ 
+            Console.WriteLine("Press enter to continue or type 'quit' to finish:");
+            string input = Console.ReadLine();
+ 
+            if (input != null && input.Trim().ToLower() == "quit")
+            {
+                break;
+            }
+ 
+            scripture.HideRandomWords(WordsToHidePerTurn);
+        }
     }
 }
+ 
