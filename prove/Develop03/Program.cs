@@ -12,7 +12,5 @@ class Program
             + "thine own understanding. In all thy ways acknowledge him, and he "
             + "shall direct thy paths.";
         Scripture scripture = new Scripture(reference, text);
- 
-        const int WordsToHidePerTurn = 3;
     }
 }

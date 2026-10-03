@@ -14,4 +14,23 @@ public class Reference
         _verse = verse;
         _endVerse = verse;
     }
+
+    // New Reference
+    public Reference(string book, int chapter, int startVerse, int endVerse)
+    {
+        _book = book;
+        _chapter = chapter;
+        _verse = startVerse;
+        _endVerse = endVerse;
+    }
+ 
+    public string GetDisplayText()
+    {
+        if (_endVerse == _verse)
+        {
+            return $"{_book} {_chapter}:{_verse}";
+        }
+ 
+        return $"{_book} {_chapter}:{_verse}-{_endVerse}";
+    }
 }
