@@ -2,6 +2,8 @@ using System;
  
 // Scripture Memorizer
 //
+// For the stretch challenge, whenever you hit enter it makes another word hidden
+// that isn't already hidden. I also made the hiddden words keep their puntuation.
 
 class Program
 {
