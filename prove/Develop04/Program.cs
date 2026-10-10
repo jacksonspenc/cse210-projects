@@ -1,5 +1,19 @@
 using System;
 
+// Exceeding requirements:
+// 
+// In the Promptdeck class it deals out questions at random from
+// a list and every question is asked before the list gets shuffled
+// and it choose the questions at random again, like a deck of cards!
+
+// In my Activitylog and Activityrecord classes they record each activity
+// in a txt file. The file runs for the whole activity recording each activity
+// and logging it. The view log option in the menu allows you to look at your
+// past activity history with information about it like how long it took, what
+// time you did it and what activity it was.
+//
+// For the breathing animation I made the bar start fast and slow down at the end
+// to make the animation ease up at the end as a nice effect.
 class Program
 {
     static void Main(string[] args)
