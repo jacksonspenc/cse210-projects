@@ -60,4 +60,10 @@ class Program
             }
         }
     }
+
+    static void RunActivity(Activity activity, ActivityLog log)
+    {
+        activity.Run();
+        log.Add(activity.GetName(), activity.GetDuration());
+    }
 }
