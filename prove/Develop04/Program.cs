@@ -26,6 +26,38 @@ class Program
  
             string choice = Console.ReadLine();
 
-            
+            if (choice == null)
+            {
+                // Input was closed, so there is nothing more to read.
+                break;
+            }
+ 
+            switch (choice.Trim())
+            {
+                case "1":
+                    RunActivity(breathing, log);
+                    break;
+                case "2":
+                    RunActivity(reflection, log);
+                    break;
+                case "3":
+                    RunActivity(listing, log);
+                    break;
+                case "4":
+                    Console.Clear();
+                    log.DisplaySummary();
+                    Console.WriteLine();
+                    Console.Write("Press enter to return to the menu.");
+                    Console.ReadLine();
+                    break;
+                case "5":
+                    running = false;
+                    break;
+                default:
+                    Console.WriteLine("Please enter a number from 1 to 5.");
+                    System.Threading.Thread.Sleep(1500);
+                    break;
+            }
+        }
     }
 }
