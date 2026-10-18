@@ -133,4 +133,32 @@ public class GoalManager
             Console.WriteLine($"  You dropped to level {newLevel}. You can climb back up!");
         }
     }
+
+    // ---------- Menu actions ----------
+ 
+    public void ListGoalNames()
+    {
+        for (int i = 0; i < _goals.Count; i++)
+        {
+            Console.WriteLine($"  {i + 1}. {_goals[i].GetName()}");
+        }
+    }
+ 
+    public void ListGoalDetails()
+    {
+        if (_goals.Count == 0)
+        {
+            Console.WriteLine("You don't have any goals yet. Create one to begin your quest!");
+            return;
+        }
+ 
+        Console.WriteLine("The goals are:");
+        for (int i = 0; i < _goals.Count; i++)
+        {
+            Goal goal = _goals[i];
+            Console.WriteLine($"  {i + 1}. {goal.GetDetailsString()}  <{goal.GetTypeLabel()}>");
+        }
+        Console.WriteLine();
+        Console.WriteLine("  Key: [ ] not done  [X] done  [∞] eternal  [!] bad habit");
+    }
 }
