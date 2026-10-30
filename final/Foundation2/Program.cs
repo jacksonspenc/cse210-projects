@@ -32,10 +32,5 @@ class Program
         Console.WriteLine("\nTurn it off:");
         thermostat.TurnOff();
         Console.WriteLine(thermostat.GetStatus());
- 
-        // These lines would NOT compile, because the data is protected:
-        // thermostat._currentTemp = 100;   // private field
-        // thermostat.CurrentTemp = 100;    // read-only property
-        // thermostat.IsOn = true;          // read-only property
     }
 }
